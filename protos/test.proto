@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+// python -m grpc_tools.protoc -I. --python_out=. --pyi_out=. --grpc_python_out=. ../../protos/route_guide.proto
+
+service Test {
+    rpc Test(EmptyRequest) returns (TestResponse) {}
+    rpc HelloName(HelloRequest) returns (HelloResponse) {}
+    rpc HelloManyTimes(HelloRequest) returns (stream HelloResponse) {}
+    rpc HelloToABunchOfPeople(stream HelloRequest) returns (HelloResponse) {}
+    rpc HelloAll(stream HelloRequest) returns (stream HelloResponse) {}
+}
+
+message EmptyRequest {}
+
+message TestResponse {
+    string test = 1;
+}
+
+message HelloRequest {
+    string name = 1;
+}
+
+message HelloResponse {
+    string hello = 1;
+}
