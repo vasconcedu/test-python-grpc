@@ -1,7 +1,5 @@
 syntax = "proto3";
 
-// python -m grpc_tools.protoc -I. --python_out=. --pyi_out=. --grpc_python_out=. ../../protos/route_guide.proto
-
 service Test {
     rpc Test(EmptyRequest) returns (TestResponse) {}
     rpc HelloName(HelloRequest) returns (HelloResponse) {}
