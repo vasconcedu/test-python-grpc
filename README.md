@@ -1,5 +1,5 @@
 # test-python-grpc
-Sample gRPC server and client applications written in Python
+Sample gRPC server and client applications written in Python.
 
 ## Usage (e.g.):
 
